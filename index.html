@@ -1,11 +1,11 @@
-
+```html id="4kvj2l"
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contrato de Locação | Guarapari Temporada</title>
+<title>Guarapari Temporada | Contrato de Locação</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,63 +19,131 @@
 }
 
 body{
-    font-family: 'Segoe UI', sans-serif;
+    font-family:'Segoe UI',sans-serif;
+    background:#0b1220;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
     background:
-    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2070&auto=format&fit=crop');
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
+    url('https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=2070&auto=format&fit=crop');
     background-size:cover;
     background-position:center;
-    min-height:100vh;
-    padding:40px 15px;
-    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 20px;
 }
 
-.container{
-    max-width:1100px;
-    margin:auto;
-    background:rgba(255,255,255,0.08);
-    backdrop-filter: blur(18px);
-    border:1px solid rgba(255,255,255,0.15);
-    border-radius:25px;
-    overflow:hidden;
-    box-shadow:0 20px 60px rgba(0,0,0,0.4);
+.overlay{
+    width:100%;
+    max-width:1200px;
 }
 
-.topo{
-    background:linear-gradient(135deg,#0d47a1,#1565c0,#1976d2);
-    padding:50px 40px;
-    text-align:center;
+/* HEADER */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:40px;
 }
 
-.topo h1{
-    font-size:40px;
-    margin-bottom:15px;
+.logo{
+    font-size:30px;
     font-weight:800;
     letter-spacing:1px;
 }
 
-.topo p{
-    opacity:0.9;
-    font-size:18px;
+.logo span{
+    color:#25D366;
 }
 
-.conteudo{
-    padding:45px;
+.menu{
+    display:flex;
+    gap:25px;
 }
 
-.section-title{
-    margin-bottom:25px;
-    margin-top:40px;
-    font-size:24px;
-    color:#fff;
-    border-left:5px solid #25D366;
-    padding-left:15px;
+.menu a{
+    color:white;
+    text-decoration:none;
+    opacity:0.85;
+    transition:0.3s;
 }
 
-.grid{
+.menu a:hover{
+    opacity:1;
+    color:#25D366;
+}
+
+/* HERO CONTENT */
+
+.hero-content{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:22px;
+    grid-template-columns:1fr 520px;
+    gap:40px;
+    align-items:center;
+}
+
+.left h1{
+    font-size:64px;
+    line-height:1.1;
+    margin-bottom:20px;
+    font-weight:900;
+}
+
+.left p{
+    font-size:20px;
+    color:#ddd;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+.badges{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.badge{
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.18);
+    padding:12px 20px;
+    border-radius:50px;
+    backdrop-filter:blur(10px);
+    font-size:14px;
+}
+
+/* FORM */
+
+.form-card{
+    background:rgba(255,255,255,0.10);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:30px;
+    padding:35px;
+    box-shadow:0 25px 60px rgba(0,0,0,0.4);
+}
+
+.form-card h2{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.form-card p{
+    color:#ddd;
+    margin-bottom:30px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
 }
 
 .input-group{
@@ -83,21 +151,25 @@ body{
     flex-direction:column;
 }
 
+.input-group.full{
+    grid-column:1/-1;
+}
+
 label{
     margin-bottom:8px;
-    font-weight:600;
+    font-size:14px;
     color:#f1f1f1;
 }
 
 input, textarea{
-    background:rgba(255,255,255,0.12);
+    background:rgba(255,255,255,0.10);
     border:1px solid rgba(255,255,255,0.15);
-    border-radius:14px;
+    border-radius:15px;
     padding:15px;
-    color:#fff;
-    font-size:15px;
-    transition:0.3s;
+    color:white;
     outline:none;
+    transition:0.3s;
+    font-size:15px;
 }
 
 input::placeholder,
@@ -108,87 +180,109 @@ textarea::placeholder{
 input:focus,
 textarea:focus{
     border-color:#25D366;
-    box-shadow:0 0 12px rgba(37,211,102,0.4);
-    background:rgba(255,255,255,0.18);
+    box-shadow:0 0 15px rgba(37,211,102,0.35);
+    background:rgba(255,255,255,0.16);
 }
 
 textarea{
-    min-height:120px;
+    min-height:110px;
     resize:vertical;
 }
 
-.info-box{
-    margin-top:40px;
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.12);
-    border-radius:18px;
-    padding:30px;
-}
+/* INFO */
 
-.info-box h3{
-    margin-bottom:20px;
-    font-size:22px;
-}
-
-.info-list{
+.info{
+    margin-top:30px;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:18px;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
 }
 
-.card{
-    background:rgba(255,255,255,0.06);
-    border-radius:15px;
-    padding:20px;
-    border:1px solid rgba(255,255,255,0.08);
+.info-box{
+    background:rgba(255,255,255,0.08);
+    padding:18px;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,0.10);
 }
 
-.card strong{
+.info-box strong{
     display:block;
-    margin-bottom:8px;
+    margin-bottom:6px;
     color:#25D366;
 }
 
-.botao{
+/* BUTTON */
+
+.btn{
     width:100%;
-    margin-top:40px;
-    padding:22px;
+    margin-top:30px;
+    padding:20px;
     border:none;
     border-radius:18px;
     background:linear-gradient(135deg,#25D366,#128C7E);
-    color:#fff;
-    font-size:20px;
-    font-weight:700;
+    color:white;
+    font-size:18px;
+    font-weight:800;
     cursor:pointer;
     transition:0.3s;
-    box-shadow:0 10px 30px rgba(37,211,102,0.35);
+    box-shadow:0 15px 35px rgba(37,211,102,0.35);
 }
 
-.botao:hover{
+.btn:hover{
     transform:translateY(-3px);
-    box-shadow:0 15px 40px rgba(37,211,102,0.5);
+    box-shadow:0 20px 45px rgba(37,211,102,0.45);
 }
 
-.rodape{
+/* FOOTER */
+
+.footer{
     text-align:center;
-    padding:25px;
-    color:#ccc;
-    border-top:1px solid rgba(255,255,255,0.1);
+    padding:30px;
+    background:#08101d;
+    color:#aaa;
 }
 
-@media(max-width:768px){
+/* RESPONSIVO */
 
-    .topo{
-        padding:35px 20px;
-    }
+@media(max-width:1100px){
 
-    .topo h1{
-        font-size:28px;
-    }
+.hero-content{
+    grid-template-columns:1fr;
+}
 
-    .conteudo{
-        padding:25px;
-    }
+.left{
+    text-align:center;
+}
+
+.badges{
+    justify-content:center;
+}
+
+}
+
+@media(max-width:700px){
+
+.left h1{
+    font-size:42px;
+}
+
+.form-grid{
+    grid-template-columns:1fr;
+}
+
+.info{
+    grid-template-columns:1fr;
+}
+
+.header{
+    flex-direction:column;
+    gap:20px;
+}
+
+.menu{
+    flex-wrap:wrap;
+    justify-content:center;
+}
 
 }
 
@@ -196,18 +290,70 @@ textarea{
 </head>
 <body>
 
-<div class="container">
+<section class="hero">
 
-<div class="topo">
-<h1>CONTRATO DE LOCAÇÃO</h1>
-<p>Temporada • Guarapari/ES • Casa Premium</p>
+<div class="overlay">
+
+<div class="header">
+
+<div class="logo">
+Guarapari<span>Temporada</span>
 </div>
 
-<div class="conteudo">
+<div class="menu">
+<a href="#">Início</a>
+<a href="#">Reserva</a>
+<a href="#">Contrato</a>
+<a href="#">Contato</a>
+</div>
 
-<h2 class="section-title">Dados do Locatário</h2>
+</div>
 
-<div class="grid">
+<div class="hero-content">
+
+<div class="left">
+
+<h1>
+Sua Casa de Temporada
+em Guarapari
+</h1>
+
+<p>
+Casa premium para temporada em Nova Guarapari.
+Conforto, segurança e praticidade para sua família aproveitar o melhor do litoral capixaba.
+</p>
+
+<div class="badges">
+
+<div class="badge">
+🏖️ Próximo à Praia
+</div>
+
+<div class="badge">
+👨‍👩‍👧‍👦 Até 10 Pessoas
+</div>
+
+<div class="badge">
+🚗 Garagem 3 Carros
+</div>
+
+<div class="badge">
+📲 Reserva via WhatsApp
+</div>
+
+</div>
+
+</div>
+
+<div class="form-card">
+
+<h2>Reserva & Contrato</h2>
+
+<p>
+Preencha os dados abaixo para enviar automaticamente sua solicitação.
+</p>
+
+<div class="form-grid">
 
 <div class="input-group">
 <label>Nome Completo</label>
@@ -226,41 +372,16 @@ textarea{
 
 <div class="input-group">
 <label>RG</label>
-<input type="text" id="rg" placeholder="Digite o RG">
+<input type="text" id="rg" placeholder="Digite seu RG">
 </div>
 
 <div class="input-group">
-<label>Rua</label>
-<input type="text" id="rua">
-</div>
-
-<div class="input-group">
-<label>Número</label>
-<input type="text" id="numero">
-</div>
-
-<div class="input-group">
-<label>Bairro</label>
-<input type="text" id="bairro">
-</div>
-
-<div class="input-group">
-<label>Cidade</label>
-<input type="text" id="cidade">
-</div>
-
-<div class="input-group">
-<label>Estado</label>
-<input type="text" id="estado">
-</div>
-
-<div class="input-group">
-<label>Data Entrada</label>
+<label>Entrada</label>
 <input type="date" id="entrada">
 </div>
 
 <div class="input-group">
-<label>Data Saída</label>
+<label>Saída</label>
 <input type="date" id="saida">
 </div>
 
@@ -269,127 +390,107 @@ textarea{
 <input type="number" id="pessoas">
 </div>
 
+<div class="input-group">
+<label>Cidade</label>
+<input type="text" id="cidade">
 </div>
 
-<h2 class="section-title">Ocupantes e Veículos</h2>
-
-<div class="grid">
-
-<div class="input-group">
-<label>Nomes dos Ocupantes</label>
+<div class="input-group full">
+<label>Ocupantes</label>
 <textarea id="ocupantes"></textarea>
 </div>
 
-<div class="input-group">
-<label>Carros / Placas</label>
+<div class="input-group full">
+<label>Veículos / Placas</label>
 <textarea id="carros"></textarea>
 </div>
 
 </div>
 
+<div class="info">
+
 <div class="info-box">
-
-<h3>Informações da Locação</h3>
-
-<div class="info-list">
-
-<div class="card">
-<strong>Valor da Locação</strong>
-R$ 4.000,00 + R$ 200,00 de faxina
+<strong>Valor</strong>
+R$ 4.000 + Faxina
 </div>
 
-<div class="card">
+<div class="info-box">
 <strong>Reserva</strong>
-50% antecipado para confirmação
+50% antecipado
 </div>
 
-<div class="card">
+<div class="info-box">
 <strong>Capacidade</strong>
-Máximo de 10 pessoas
+Máximo 10 pessoas
 </div>
 
-<div class="card">
-<strong>Garagem</strong>
-Até 3 veículos
-</div>
-
-<div class="card">
-<strong>Regras</strong>
-Proibido som alto e perturbação
-</div>
-
-<div class="card">
-<strong>Endereço</strong>
-Nova Guarapari • Guaibura • ES
+<div class="info-box">
+<strong>Localização</strong>
+Nova Guarapari • ES
 </div>
 
 </div>
 
-</div>
-
-<button class="botao" onclick="enviarWhatsapp()">
-ENVIAR CONTRATO VIA WHATSAPP
+<button class="btn" onclick="enviarWhatsapp()">
+ENVIAR SOLICITAÇÃO VIA WHATSAPP
 </button>
 
 </div>
 
-<div class="rodape">
-Wanderlei Salvador © Todos os direitos reservados
 </div>
 
+</div>
+
+</section>
+
+<div class="footer">
+Wanderlei Salvador © Todos os direitos reservados
 </div>
 
 <script>
 
 function enviarWhatsapp(){
 
-    let nome = document.getElementById("nome").value;
-    let telefone = document.getElementById("telefone").value;
-    let cpf = document.getElementById("cpf").value;
-    let rg = document.getElementById("rg").value;
-    let rua = document.getElementById("rua").value;
-    let numero = document.getElementById("numero").value;
-    let bairro = document.getElementById("bairro").value;
-    let cidade = document.getElementById("cidade").value;
-    let estado = document.getElementById("estado").value;
-    let entrada = document.getElementById("entrada").value;
-    let saida = document.getElementById("saida").value;
-    let pessoas = document.getElementById("pessoas").value;
-    let ocupantes = document.getElementById("ocupantes").value;
-    let carros = document.getElementById("carros").value;
+let nome = document.getElementById("nome").value;
+let telefone = document.getElementById("telefone").value;
+let cpf = document.getElementById("cpf").value;
+let rg = document.getElementById("rg").value;
+let entrada = document.getElementById("entrada").value;
+let saida = document.getElementById("saida").value;
+let pessoas = document.getElementById("pessoas").value;
+let cidade = document.getElementById("cidade").value;
+let ocupantes = document.getElementById("ocupantes").value;
+let carros = document.getElementById("carros").value;
 
-    let mensagem = `
+let mensagem = `
 
-🏠 *NOVO CONTRATO DE LOCAÇÃO*
+🏠 *NOVA SOLICITAÇÃO DE LOCAÇÃO*
 
 👤 Nome: ${nome}
 📞 Telefone: ${telefone}
-🪪 CPF: ${cpf}
-📄 RG: ${rg}
+📄 CPF: ${cpf}
+🪪 RG: ${rg}
 
-📍 ENDEREÇO
-${rua}, Nº ${numero}
-${bairro}
-${cidade} - ${estado}
+📍 Cidade: ${cidade}
 
 📅 Entrada: ${entrada}
 📅 Saída: ${saida}
 
-👥 Quantidade de Pessoas: ${pessoas}
+👨‍👩‍👧 Pessoas: ${pessoas}
 
-🛌 OCUPANTES:
+🛌 Ocupantes:
 ${ocupantes}
 
-🚗 VEÍCULOS:
+🚗 Veículos:
 ${carros}
 
 `;
 
-    let numeroWhatsapp = "5527995088540";
+let numero = "5527995088540";
 
-    let url = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensagem)}`;
+let url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
 
-    window.open(url, '_blank');
+window.open(url, '_blank');
 
 }
 
